@@ -1,0 +1,9 @@
+{% extends '_base.html' %}
+
+{% block content %}
+  <h2>Details about {{ pet.name }}</h2>
+  <p>Description: {{ pet.description }}</p>
+  <p>Human Caregiver: {{ pet.human }}</p>
+  <p><a href="{% url 'pet_update' pet.id %}">+ edit</a></p>
+  <p><a href="{% url 'pet_delete' pet.id %}">+ delete</a></p>
+{% endblock content %}
